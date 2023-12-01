@@ -36,7 +36,8 @@
     var generatePrima = '{{ url('generate-prima') }}';
 
 
-    $("#segitiga").on("click",function(){
+    $("#segitiga").on("click",function(e){
+        e.preventDefault();
         $("#result").empty()
 
         formData = {
@@ -77,8 +78,8 @@
                 
             }
         }).fail(function(jqXHR, textStatus, errorThrown) {
-            // alert(errorThrown)
-            console.log(errorThrown)
+            alert(errorThrown)
+            // console.log(errorThrown)
         });
         // alert('tes');
     })
@@ -124,8 +125,8 @@
                 
             }
         }).fail(function(jqXHR, textStatus, errorThrown) {
-            // alert(errorThrown)
-            console.log(errorThrown)
+            alert(errorThrown)
+            // console.log(errorThrown)
         });
         // alert('tes');
     })
@@ -170,8 +171,8 @@
                 
             }
         }).fail(function(jqXHR, textStatus, errorThrown) {
-            // alert(errorThrown)
-            console.log(errorThrown)
+            alert(errorThrown)
+            // console.log(errorThrown)
         });
         // alert('tes');
     })
