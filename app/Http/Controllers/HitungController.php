@@ -172,14 +172,20 @@ class HitungController extends Controller
             $res = "";
             $nol = "0";
             $resArray=[];
-            for ($i=0; $i < $request->get('num'); $i++) { 
+            for ($i=1; $i < $request->get('num'); $i++) { 
                 # code...
-                if($i % 2)
+                $a = 0;
+                for ($j=1; $j <= $i; $j++) { 
+                    if($i % $j == 0)
+                    {
+                        $a++;
+                    }
+                }
+                if($a == 2)
                 {
                     array_push($resArray,$i);
+
                 }
-                // dd($number[$i]);
-                // $nol .= $nol + "0";
             }
             // dd($resArray);
             $data = $resArray;
